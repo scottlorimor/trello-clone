@@ -1,15 +1,21 @@
 //STEP 1 - Add Express to your Node server (make sure you have installed it...):
 
-//STEP 4 - At the bottom of this file, you will see some commented out code. Move section 1 here:
+//STEP 5 - At the bottom of this file, you will see some commented out code. Move section 1 here:
 
 
 
 //STEP 2 - var app and var port will go here:
 
 
-//STEP 5 - Finally grab section 2 at the bottom of this file and drop it here:
+//STEP 6 - Finally grab section 2 at the bottom of this file and drop it here:
 
 //STEP 3 - Code for your app.listen() here:
+
+
+//STEP 6 - Test your server. You should be able to run nodemon in your terminal and see your console.log that you put in your app.listen callback function. If you see that, you are in business!
+
+
+
 
 
 
