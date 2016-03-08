@@ -1,12 +1,12 @@
-//These are your imports. We are missing express - add it at the top of the list
-
+var express = require('express')
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
 
-//var app and var port will go here:
+var app = express();
+var port = 8000;
 
 
 app.use(bodyParser.json());
@@ -66,5 +66,6 @@ db.once('open', function() {
     console.log('connected to db at ' + mongoUri)
 });
 
-// Code for your app.listen() here:
-
+app.listen(port, function() {
+    console.log('Server listening on port ' + port);
+});
