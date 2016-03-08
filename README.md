@@ -25,53 +25,7 @@ then
 
 and open in browser: localhost:8000
 
-## Folder Structure (Day 1)
-### Explanation
-####
-As you learned with the last project, folder structure is vital as you are setting up a new project. Now we are going to throw a twist at you and give you a new folder structure that you will use when creating a full-stack app (frontend and backed). We will continue to use a feature based approach, and we will apply the same principles to the files that we will use for our server as well.
-
-### Code
-####
-* Fork and clone this repository
-* Create the following files in this structure in your project folder
-* Note that we have an api directory, and a public directory. This will be vitally important in keeping our frontend (public) and backend (api) code seperated
-
-```
-server.js
-.gitignore
-/public
-  app.js
-  index.html
-  /components
-    /auth
-      authCtrl.js
-      authService.js
-      authview.html
-    /directives
-      draggable.js
-    /list
-      cardDirective.js
-      listDirective.js
-      listService.js
-      mainCtrl.js
-      mainView.html
-      pageDirective.js
-      /views
-        cardView.html
-        listView.html
-        pageView.html
-  /css
-    styles.css
-    styless.less
-/api
-  /controllers
-    listCtrl.js
-    userCtrl.js
-  /models
-    listModel.js
-    userModel.js
-```
-## Install and require node modules
+## Install and require node modules (Day 1)
 
 ### Node Modules
 
@@ -84,12 +38,12 @@ To get our node server up and running, install the `express` module with npm, th
 * Import `express` into your server.js file with a require
 
 ####
-#####Using npm to install node modules
+##### Using npm to install node modules
 Open your terminal, and make sure you have navigated to the root of your project (if you run the `ls` command, you should see `server.js`, `api`, and `public`. When you are there, you can now run the `npm` command to install node modules for your project.
 
 To start out, we want to install `express`. To do that, run `npm install --save express`. This tells npm to install the express library to your project, and save a reference of the express library in your `package.json` file.
 
-#####Import a node module with require
+##### Import a node module with require
 Now that the node module is installed, we need to import it into your server.js file. This will allow us to access and use the library from this file. You can compare this to injecting a service into a controller in Angular. By doing that, the service, and its built-in functions become "available" to the controller. In the same way, if you import a node module into a .js file, it becomes "available" to that file.
 
 Import express into the server.js file like this (it will always go at the top of your file) :
