@@ -29,6 +29,7 @@ and open in browser: localhost:8000
 ## Intro / node modules (Day 1)
 
 ### Project introduction
+
 ####
 In this project, you will be building a full-stack app that will be a clone of trello.com. In order to get started, you will need to clone [THIS](https://github.com/DevMountain/trello-clone) repo. You will automatically be on the `master` branch. This branch is the project solution. You may refer to this code if you need to. For each day, you will need to checkout to a new branch. In the new branches we have removed the code that you will be working on that day, but we have left in the rest of the code for the rest of the project. This will give you the ability to test the app after you finish each day's work. After you finish everything for that day, you will be able to fire up your project and see it in your browser. If it pulls up okay, and everything is working, then you know you finished the day's work correctly. If it doesn't work, then you will some more work to do. 
 
@@ -39,6 +40,13 @@ Finally, instructions for building this project are in the [Project Guide](http:
 If you have any feedback on the project, or instructions, you can make a change in the project, or on the README.md, then submit a pull request to the DevMountain repository, and we will review those changes. (It will happen a lot faster if you message the link to your pull request to your teacher).
  
 Have fun!
+
+### Project Setup
+
+#### 
+You will probably notice that the file structure is different than the last project. This setup organizes files by file type. So, in your angular app, you will see that all of the controllers are in one directory, and then the services are in a seperate directory. In the `views` directory, you will see another directory called `partials`. This directory is used for html templates that are used by the directives in this project.
+
+Project organization is determined by the project itself, and then the developers working on the project. You will see different styles of organization used in the programing world, and will probably quickly come to have your own preference for organization.
 
 ### Node Modules
 
