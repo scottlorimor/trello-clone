@@ -12,8 +12,8 @@
 //STEP 3 - Code for your app.listen() here:
 
 
-//STEP 6 - Test your server. You should be able to run nodemon in your terminal and see your console.log that you put in your app.listen callback function. If you see that, you are in business!
-
+//STEP 4 - Test your server. You should be able to run nodemon in your terminal and see your console.log that you put in your app.listen callback function. If you see that, you are in business!
+//STEP 7 - Once your own code is up, and all the code from below, you can run mongod, and then start up your server, then go to localhost:8000 (or whatever your port number is), and see the whole project run.
 
 
 
