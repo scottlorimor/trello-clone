@@ -1,8 +1,10 @@
 var express = require('express');
-//STEP 5 - Find Section 1 code below and paste it here
+//STEP 6 - Find Section 1 code below and paste it here
 
 var app = express();
 var port = 8000;
+// STEP 5 - Server your public files to the browser here
+
 
 // STEP 1 - Fire up your server, and make sure you get the console.log in your terminal
 // STEP 2 - Code here for your endpoint:
@@ -13,10 +15,10 @@ var port = 8000;
 // STEP 4 - In the public directory, build an Angular app that you can use to test this api. You should 
 // have these three connecting peices in your Angular app: authView, authCtrl, and the listService. 
 
-// STEP 6 - Find Section 2 code below and paste it here
+// STEP 7 - Find Section 2 code below and paste it here
 
 
-// Step 7 - Uncomment all the code from the angular app, and test your trello app again. You should take a
+// Step 8 - Uncomment all the code from the angular app, and test your trello app again. You should take a
 // minute to look through all of the HTTP requests that are happening on the front end, and find the matching
 // endpoints here in the server, so that you can get a feel for how the connection is happening betweent the 
 // front end and the server.
@@ -48,7 +50,7 @@ app.listen(port, function() {
 // app.use(bodyParser.urlencoded({extended: false}));
 // app.use(cors());
 // app.use(morgan('dev'));
-// app.use(express.static(__dirname + '/public'));
+
 
 // app.use(session({
 //     secret: 'carpediem',
