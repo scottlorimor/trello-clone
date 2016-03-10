@@ -171,7 +171,7 @@ In Postman, make a request to the new endpoint on your server. You will have to 
 ### Build an Angular App and test your server
 ####
 ##### Angular basic structure
-In the file structure, there is a directory called public. This will hold all the files for our Angular app. Inside that directory, build out your angular app. Go ahead and build out the angular structure for all of the files, but for now, we are just going to be working in the authView, authtrl, and the listService. You will need to build the routes for ui-router as well. We will only need an `auth` state, and a `list` state.
+In the file structure, there is a directory called public. This will hold all the files for our Angular app. Inside that directory, build out your angular app. Go ahead and build out the angular structure for all of the files, but for now, we are just going to be working in the authView, authCtrl, and the listService. You will need to build the routes for ui-router as well. We will only need an `auth` state, and a `list` state.
 
 ##### Wire up an $http request
 In the listService, write a $http request that will hit the test endpoint in your server. Build out the service, controller, and view so that you can display the returned string in your browser. There is still one step that we need to complete before this can be successful, so you won't be able to test things yet.
