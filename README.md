@@ -338,10 +338,10 @@ Now that we have worked on building a Node server, we need to learn how to persi
 ####
 Remember the "verbs" that we have learned about with HTTP communication? GET, POST, PUT, and DELETE? Databases use a very similar system of communication to know what to do when they receive requests from a browser. The commands are different though, and you can remember them with the acronym CRUD - Create, Read, Update, and Delete. Hopefully you see the correlation between the different verbs. It's something like this:
 
-CREATE  -->   POST
-READ    -->   GET
-UPDATE  -->   PUT
-DELETE  -->   DELETE
+CREATE  -->   POST <br/>
+READ    -->   GET <br/>
+UPDATE  -->   PUT <br/>
+DELETE  -->   DELETE <br/>
 
 So... if you are making a 'GET' request from the browser, your server will receive that request, then it will use 'READ' commands to read, (or "get") data on the database in order to complete that request. Or, if your server receives a 'POST' request, it will run 'CREATE' commands to the database to create, or write, new data onto the database. And so on.
 
