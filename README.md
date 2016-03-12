@@ -314,7 +314,7 @@ $scope.login = function(username) {
 ##### authService.js
 ```
 this.login = funciton(username) {
-   return $http.post(url, username);
+   return $http.post(url, {username: username});
 };
 ```
 
@@ -328,5 +328,8 @@ app.post('endpoint', function(req, res) {
 
 ## MongoDB Intro (Day 4)
 
-###
+### Intro to Databases
+
+####
+Now that we have worked on building a Node server, we need to larn how to persist data. 
 
