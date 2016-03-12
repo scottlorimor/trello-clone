@@ -304,7 +304,10 @@ Remember to style this form. The default `<button>` tag is horrific, and definit
 ```
 $scope.login = function(username) {
     console.log("username: ", username);
-    $state.go('list');
+    authService.login(username).then(function(res) {
+        console.log(res);
+        $state.go('list');
+    };
 };
 ```
 
