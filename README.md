@@ -331,5 +331,24 @@ app.post('endpoint', function(req, res) {
 ### Intro to Databases
 
 ####
-Now that we have worked on building a Node server, we need to larn how to persist data. 
+Now that we have worked on building a Node server, we need to learn how to persist data. We are going to use a database to do that. There are a lot of things that we would want to save in a database. If we look at this project, there are a  few things that we will persist to our database. Username, lists, and cards on each list. We also want to be able to make sure that there is some way to tue cards to their core t list, and lists to the correct user. MongoDB will help us make sure all of those stay correlated correctly, and that our data is stored and ready to be called to the browser.
 
+### CRUD operations
+
+####
+Remember the "verbs" that we have learned about with HTTP communication? GET, POST, PUT, and DELETE? Databases use a very similar system of communication to know what to do when they receive requests from a browser. The commands are different though, and you can remember them with the acronym CRUD - Create, Read, Update, and Delete. Hopefully you see the correlation between the different verbs. It's something like this:
+
+CREATE  -->   POST
+READ    -->   GET
+UPDATE  -->   PUT
+DELETE  -->   DELETE
+
+So... if you are making a 'GET' request from the browser, your server will receive that request, then it will use 'READ' commands to read, (or "get") data on the database in order to complete that request. Or, if your server receives a 'POST' request, it will run 'CREATE' commands to the database to create, or write, new data onto the database. And so on.
+
+### Build requests to your database
+
+####
+Now we get to put all of our new knowledge into practice! We are going to build out one of each type of request. So, you should be able to run create, read, update, or delete commands within your database. To start off, we need to install and import mongojs in the server.js file. Then define a database instance. You can name the instance "trello-clone", then create a collection called "lists".
+
+
+In your server.js, you will need to create endpoints that will receive all four types of HTTP requests from the browser. Then, within the callback functions of your endpoints, 
