@@ -280,12 +280,12 @@ app.listen(port, function() {
 ####
 If you don't know what trello is, now is a really good time to go to trello.com, sign up for a fee account, and play around with it. We are building a simplified version of trello, so it will help to be a little familiar with how it works.
 
-For our app though, we just want a login page, and a home page where we will have the trello style boards and lists. So, first let's build a login page. You can style this however you want. The only requirements are for you to have a place for the user to type in their username, and then a button that will log them in. Don't worry about having a password field. We will only require a username. For now, don't worry about running the login function all the way to the server. We will get to that part of the process when we learn about databases next. Instead, capture the username in your controller, and then simply route the user to the lists page.
+For our app though, we just want a login page, and a home page where we will have the trello style boards and lists. So, first let's build a login page. You can style this however you want. The only requirements are for you to have a place for the user to type in their username, and then a button that will log them in. Don't worry about having a password field. We will only require a username. In the login process, run a function in your controller that passes the username to your service, then make a request from the service to your server. In your server, console.log the request that came in and return a string with a success message. Finally, route the user to the lists page.
 
 Finally, try to make this page look really nice. Remember, design really counts when it comes to the job hunt!
 
 ####
-In order for your user to log in with their username, you will need an `input` element in your html that is bound to the $scope object with the ngModel directive. You can wrap the `input` tag in an html `form` tag to give you the ability to use ng-submit, which will let you user hit enter to login. You will still need to include the button, as some people will click the button to log in as well. Inside your authCtrl, you will need a login function on the $scope object that, for now, will capture the username, then route the user to the `list` state.
+In order for your user to log in with their username, you will need an `input` element in your html that is bound to the $scope object with the ngModel directive. You can wrap the `input` tag in an html `form` tag to give you the ability to use ng-submit, which will let you user hit enter to login. You will still need to include the button, as some people will click the button to log in as well. Inside your authCtrl, you will need a login function on the $scope object that hits some endpoint on your server, sending the users username. In your server, console.log the reqquest body, and make sure it is going through. Then return some string that says that the login was a success.
 
 ####
 Your code may look something like this:
@@ -298,15 +298,30 @@ Your code may look something like this:
 </form>
 ```
 
+Remember to style this form. The default `<button>` tag is horrific, and definitely needs some help!
+
 ##### authCtrl.js
 ```
-$scope.login = function() {
+$scope.login = function(username) {
     console.log("username: ", username);
     $state.go('list');
 };
 ```
 
-Remember to style this form. The default `<button>` tag is horrific, and definitely needs some help!
+##### authService.js
+```
+this.login = funciton(username) {
+   return $http.post(url, username);
+};
+```
+
+##### server.js
+```
+app.post('endpoint', function(req, res) {
+    console.log('**** request body', req.body);
+    res.send("You have succesfully logged in! Best secure login ever!");
+});
+```
 
 ## MongoDB Intro (Day 4)
 
