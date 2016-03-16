@@ -1,6 +1,9 @@
 var express = require('express');
 var session = require('express-session');
 // Step 1 - Require your middleware modules here
+var cors = require('cors');
+var morgan = require('morgan');
+var bodyParser = require('body-parser')
 
 var app = express();
 var port = 8000;
