@@ -12,11 +12,13 @@ app.config(function ($urlRouterProvider, $stateProvider) {
         .state('todo', {
             url: '/list',
             controller: 'MainCtrl',
-            templateUrl: '../views/mainView.html',
-            resolve: {
-                lists: function (listService) {
-                    return listService.getLists();
-                }
-            }
+            templateUrl: '../views/mainView.html'
+            // resolve: {
+            //     lists: function (listService) {
+            //         return listService.getLists();
+            //     }
+            // }
         })
 })
+
+

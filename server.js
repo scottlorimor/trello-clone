@@ -5,6 +5,7 @@ var cors = require('cors');
 var morgan = require('morgan');
 var bodyParser = require('body-parser')
 
+
 var app = express();
 var port = 8000;
 
@@ -12,6 +13,10 @@ var port = 8000;
 // Step 2 - Congfigure your middleware here
 
 app.use(express.static(__dirname + '/public'));
+app.use(cors());
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}))
 
 // Step 3 - Test your server, then remove this endpoint, and paste the "Section One" code from below here
 
@@ -22,6 +27,11 @@ app.use(express.static(__dirname + '/public'));
 app.get('/api/test', function(req, res) {
     res.send("The request was successful!");
 });
+
+app.post('/list', function(req, res) {
+	console.log("Received username: ", req.body);
+	res.send(JSON.stringify({ message: "Successful Login!!" }));
+})
 
 app.listen(port, function() {
     console.log('Server listening on port ' + port);
